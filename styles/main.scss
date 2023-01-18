@@ -44,7 +44,7 @@
                 width: 100px;
                 height: 30px;
                 margin-left: 50px;
-                border: 2px solid black;
+                border: 1px solid black;
             }
         }
     }
@@ -52,6 +52,10 @@
     .fullPrice {
         margin-top: 50px;
         width: 300px;
+    }
+
+    .alert {
+        margin-top: 50px;
     }
 
 }
