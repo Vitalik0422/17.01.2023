@@ -31,6 +31,7 @@ let buttonPlus = document.querySelector('.button-plus');
 let buttonMinus = document.querySelector('.button-minus');
     buttonMinus.addEventListener('click', () =>{
         a = a - 1;
+        elqunt.innerHTML = a;
         fullPrice = c * a / priceCurrenc;
         elFullPrice.innerHTML = 'Загальна сума: ' + fullPrice.toFixed(2);
         if (a < 0){
