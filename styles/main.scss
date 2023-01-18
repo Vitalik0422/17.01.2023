@@ -49,12 +49,26 @@
         }
     }
 
+    .currency {
+        width: 1110px;
+        height: 30px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        button {
+            width: 200px;
+        }
+    }
+
     .fullPrice {
         margin-top: 50px;
         width: 300px;
     }
 
     .alert {
+        width: 300px;
         margin-top: 50px;
     }
 
