@@ -2,11 +2,23 @@ let elqunt = document.querySelector('.quantity');
 let elFullPrice = document.querySelector('.fullPrice');
 let elFullPriceAlert = document.querySelector('.alert');
 let fullPrice = Number(0);
-let a = 0;
-let c = 10000;
 let currency;
 let price = document.querySelector('.price');
+let a = Number(0);
+console.log(typeof a);
+let amount = {};
+let priceC = {};
+let LS = localStorage;
+let c = Number(10000);
+console.log(typeof c);
+
+a = JSON.parse(LS.getItem('amount'));
+c = JSON.parse(LS.getItem('priceC'));
+console.log(typeof a);
+console.log(typeof c);
+elqunt.innerHTML = a;
 price.innerHTML = c;
+
 
 let inAdminMenu = document.querySelector('.inAdminMenu');
     inAdminMenu.addEventListener('click', () => {
@@ -37,6 +49,8 @@ let enterPriceOutAdmin = 0;
         enterPriceOutAdmin = ev.target.value;
         if (enterPriceOutAdmin >= 5000){
             c = ev.target.value
+            console.log(c);
+            LS.setItem('priceC', JSON.stringify(c))
             price.innerHTML = c; 
             ev.target.value = null;
             calcTotalAmount()
@@ -127,6 +141,7 @@ function calcTotalAmount() {
     fullPrice = c * a / priceCurrenc;
     elFullPrice.innerHTML = 'Загальна сума: ' + fullPrice.toFixed(2);
     elAmountPoductInBasket.innerHTML = a;
+    LS.setItem('amount', JSON.stringify(a));
 }
 
 
