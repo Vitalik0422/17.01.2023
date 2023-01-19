@@ -1,3 +1,15 @@
+.adminMenu {
+  display: none;
+  position: absolute;
+  left: 41%;
+  width: 200px;
+  height: 100px;
+  margin: 0 auto;
+}
+.adminMenu .enterPrice {
+  display: none;
+}
+
 .magazine {
   width: 1110px;
   margin: 0 auto;
@@ -35,7 +47,7 @@
   background: none;
   cursor: pointer;
 }
-.magazine .product .quant input {
+.magazine .product .quant .price {
   width: 100px;
   height: 30px;
   margin-left: 50px;
@@ -59,4 +71,9 @@
 .magazine .alert {
   width: 300px;
   margin-top: 50px;
+}
+
+.inAdminMenu {
+  width: 50px;
+  height: 50px;
 }/*# sourceMappingURL=main.css.map */
